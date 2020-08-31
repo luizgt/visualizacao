@@ -1,0 +1,81 @@
+RANK,SHIRTNUMBER,NAME,TEAM,ACES,FAULTS,HITS,TOTAL ATTEMPTS,AVERAGE PER SET 
+RUS,
+    {axis:"Aces",value:0.069375},
+    {axis:"Faults",value:0.199375},
+    {axis:"Hits",value:0.73125}
+    
+JPN,
+    {axis:"Aces",value:0.0667172100075815},
+    {axis:"Faults",value:0.1728582259287339},
+    {axis:"Hits",value:0.7604245640636846}
+    
+BRA,
+    {axis:"Aces",value:0.050933786078098474},
+    {axis:"Faults",value:0.166383701188455},
+    {axis:"Hits",value:0.7826825127334465}
+    
+AUS,
+    {axis:"Aces",value:0.08013082583810302},
+    {axis:"Faults",value:0.18642681929681112},
+    {axis:"Hits",value:0.7334423548650858}
+    
+ITA,
+    {axis:"Aces",value:0.05770690964312832},
+    {axis:"Faults",value:0.16704631738800305},
+    {axis:"Hits",value:0.7752467729688687}
+    
+POR,
+    {axis:"Aces",value:0.04941599281221923},
+    {axis:"Faults",value:0.1967654986522911},
+    {axis:"Hits",value:0.7538185085354897}
+    
+SRB,
+    {axis:"Aces",value:0.056509298998569386},
+    {axis:"Faults",value:0.17525035765379113},
+    {axis:"Hits",value:0.7682403433476395}
+    
+CAN,
+    {axis:"Aces",value:0.05030487804878049},
+    {axis:"Faults",value:0.18140243902439024},
+    {axis:"Hits",value:0.7682926829268293}
+    
+GER,
+    {axis:"Aces",value:0.06102941176470588},
+    {axis:"Faults",value:0.23161764705882354},
+    {axis:"Hits",value:0.7073529411764706}
+    
+IRI,
+    {axis:"Aces",value:0.05437026841018582},
+    {axis:"Faults",value:0.1913282863041982},
+    {axis:"Hits",value:0.7543014452856159}
+    
+USA,
+    {axis:"Aces",value:0.0626865671641791},
+    {axis:"Faults",value:0.2143283582089552},
+    {axis:"Hits",value:0.7229850746268657}
+    
+BUL,
+    {axis:"Aces",value:0.04385277995301488},
+    {axis:"Faults",value:0.21769772905246673},
+    {axis:"Hits",value:0.7384494909945184}
+    
+POL,
+    {axis:"Aces",value:0.049945115257958285},
+    {axis:"Faults",value:0.1531284302963776},
+    {axis:"Hits",value:0.7969264544456641}
+    
+FRA,
+    {axis:"Aces",value:0.042740841248303935},
+    {axis:"Faults",value:0.19131614654002713},
+    {axis:"Hits",value:0.7659430122116689}
+    
+CHN,
+    {axis:"Aces",value:0.047080979284369114},
+    {axis:"Faults",value:0.1902071563088512},
+    {axis:"Hits",value:0.7627118644067796}
+    
+ARG,
+    {axis:"Aces",value:0.041206769683590876},
+    {axis:"Faults",value:0.1817512877115526},
+    {axis:"Hits",value:0.7770419426048565}
+    

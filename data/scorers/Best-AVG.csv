@@ -1,0 +1,80 @@
+IRI,
+    {axis:"Attacks",value:0.7821497120921305},
+    {axis:"Blocks",value:0.1420345489443378},
+    {axis:"Serves",value:0.07581573896353166}
+    
+JPN,
+    {axis:"Attacks",value:0.8190376569037657},
+    {axis:"Blocks",value:0.08891213389121339},
+    {axis:"Serves",value:0.09205020920502092}
+    
+BRA,
+    {axis:"Attacks",value:0.8001611603545528},
+    {axis:"Blocks",value:0.12731668009669622},
+    {axis:"Serves",value:0.072522159548751}
+    
+GER,
+    {axis:"Attacks",value:0.8115183246073299},
+    {axis:"Blocks",value:0.10157068062827225},
+    {axis:"Serves",value:0.08691099476439791}
+    
+ARG,
+    {axis:"Attacks",value:0.8218623481781376},
+    {axis:"Blocks",value:0.1214574898785425},
+    {axis:"Serves",value:0.05668016194331984}
+    
+RUS,
+    {axis:"Attacks",value:0.7398091934084996},
+    {axis:"Blocks",value:0.16392020815264527},
+    {axis:"Serves",value:0.09627059843885516}
+    
+AUS,
+    {axis:"Attacks",value:0.7630979498861048},
+    {axis:"Blocks",value:0.1252847380410023},
+    {axis:"Serves",value:0.11161731207289294}
+    
+CHN,
+    {axis:"Attacks",value:0.7686980609418282},
+    {axis:"Blocks",value:0.16204986149584488},
+    {axis:"Serves",value:0.06925207756232687}
+    
+POR,
+    {axis:"Attacks",value:0.8010335917312662},
+    {axis:"Blocks",value:0.12790697674418605},
+    {axis:"Serves",value:0.0710594315245478}
+    
+FRA,
+    {axis:"Attacks",value:0.8040345821325648},
+    {axis:"Blocks",value:0.13544668587896252},
+    {axis:"Serves",value:0.06051873198847262}
+    
+CAN,
+    {axis:"Attacks",value:0.7814776274713839},
+    {axis:"Blocks",value:0.14984391259105098},
+    {axis:"Serves",value:0.06867845993756504}
+    
+BUL,
+    {axis:"Attacks",value:0.7902665121668598},
+    {axis:"Blocks",value:0.14484356894553882},
+    {axis:"Serves",value:0.06488991888760139}
+    
+ITA,
+    {axis:"Attacks",value:0.7789473684210526},
+    {axis:"Blocks",value:0.14105263157894737},
+    {axis:"Serves",value:0.08}
+    
+USA,
+    {axis:"Attacks",value:0.7625},
+    {axis:"Blocks",value:0.15},
+    {axis:"Serves",value:0.0875}
+    
+POL,
+    {axis:"Attacks",value:0.7613636363636364},
+    {axis:"Blocks",value:0.1696969696969697},
+    {axis:"Serves",value:0.06893939393939394}
+    
+SRB,
+    {axis:"Attacks",value:0.7894736842105263},
+    {axis:"Blocks",value:0.12899896800825594},
+    {axis:"Serves",value:0.08152734778121776}
+    

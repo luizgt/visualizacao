@@ -1,0 +1,81 @@
+RANK,SHIRTNUMBER,NAME,TEAM,STUFF_BLOCKS,FAULTS,REBOUNDS,TOTAL_ATTEMPTS,AVERAGE_PER_SET 
+CAN,
+    {axis:"Stuff",value:0.1672473867595819},
+    {axis:"Faults",value:0.4146341463414634},
+    {axis:"Rebounds",value:0.4181184668989547}
+    
+IRI,
+    {axis:"Stuff",value:0.1662921348314607},
+    {axis:"Faults",value:0.4348314606741573},
+    {axis:"Rebounds",value:0.398876404494382}
+    
+RUS,
+    {axis:"Stuff",value:0.20610687022900764},
+    {axis:"Faults",value:0.4372955288985823},
+    {axis:"Rebounds",value:0.35659760087241005}
+    
+BUL,
+    {axis:"Stuff",value:0.16578249336870027},
+    {axis:"Faults",value:0.47214854111405835},
+    {axis:"Rebounds",value:0.3620689655172414}
+    
+POR,
+    {axis:"Stuff",value:0.14732142857142858},
+    {axis:"Faults",value:0.4538690476190476},
+    {axis:"Rebounds",value:0.39880952380952384}
+    
+ARG,
+    {axis:"Stuff",value:0.1380897583429229},
+    {axis:"Faults",value:0.4142692750287687},
+    {axis:"Rebounds",value:0.4476409666283084}
+    
+USA,
+    {axis:"Stuff",value:0.17374517374517376},
+    {axis:"Faults",value:0.4198841698841699},
+    {axis:"Rebounds",value:0.4063706563706564}
+    
+BRA,
+    {axis:"Stuff",value:0.15384615384615385},
+    {axis:"Faults",value:0.436222005842259},
+    {axis:"Rebounds",value:0.40993184031158714}
+    
+ITA,
+    {axis:"Stuff",value:0.16791979949874686},
+    {axis:"Faults",value:0.4223057644110276},
+    {axis:"Rebounds",value:0.40977443609022557}
+    
+CHN,
+    {axis:"Stuff",value:0.1924342105263158},
+    {axis:"Faults",value:0.46381578947368424},
+    {axis:"Rebounds",value:0.34375}
+    
+POL,
+    {axis:"Stuff",value:0.20607175712971482},
+    {axis:"Faults",value:0.42410303587856485},
+    {axis:"Rebounds",value:0.36982520699172033}
+    
+GER,
+    {axis:"Stuff",value:0.1229404309252218},
+    {axis:"Faults",value:0.46894803548795944},
+    {axis:"Rebounds",value:0.40811153358681873}
+    
+SRB,
+    {axis:"Stuff",value:0.16361256544502617},
+    {axis:"Faults",value:0.4620418848167539},
+    {axis:"Rebounds",value:0.3743455497382199}
+    
+FRA,
+    {axis:"Stuff",value:0.17049576783555018},
+    {axis:"Faults",value:0.41717049576783555},
+    {axis:"Rebounds",value:0.41233373639661425}
+    
+JPN,
+    {axis:"Stuff",value:0.11871508379888268},
+    {axis:"Faults",value:0.48324022346368717},
+    {axis:"Rebounds",value:0.39804469273743015}
+    
+AUS,
+    {axis:"Stuff",value:0.15965166908563136},
+    {axis:"Faults",value:0.4455732946298984},
+    {axis:"Rebounds",value:0.39477503628447025}
+    

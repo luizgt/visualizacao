@@ -1,0 +1,81 @@
+RANK;SHIRTNUMBER;NAME;TEAM;RUNNING SETS;FAULTS;STILL SETS;TOTAL ATTEMPTS;AVERAGE PER SET
+IRI,
+    {axis:"Running Sets",value:0.34893617021276596},
+    {axis:"Faults",value:0.0182370820668693},
+    {axis:"Still sets",value:0.6328267477203647}
+    
+CAN,
+    {axis:"Running Sets",value:0.31299212598425197},
+    {axis:"Faults",value:0.015091863517060367},
+    {axis:"Still sets",value:0.6719160104986877}
+    
+ITA,
+    {axis:"Running Sets",value:0.34215751158173396},
+    {axis:"Faults",value:0.00727994705493051},
+    {axis:"Still sets",value:0.6505625413633356}
+    
+AUS,
+    {axis:"Running Sets",value:0.26334026334026334},
+    {axis:"Faults",value:0.018711018711018712},
+    {axis:"Still sets",value:0.717948717948718}
+    
+GER,
+    {axis:"Running Sets",value:0.28606060606060607},
+    {axis:"Faults",value:0.007272727272727273},
+    {axis:"Still sets",value:0.7066666666666667}
+    
+BUL,
+    {axis:"Running Sets",value:0.30526315789473685},
+    {axis:"Faults",value:0.008421052631578947},
+    {axis:"Still sets",value:0.6863157894736842}
+    
+FRA,
+    {axis:"Running Sets",value:0.26485862665897286},
+    {axis:"Faults",value:0.008078476630121177},
+    {axis:"Still sets",value:0.727062896710906}
+    
+JPN,
+    {axis:"Running Sets",value:0.2411042944785276},
+    {axis:"Faults",value:0.010429447852760737},
+    {axis:"Still sets",value:0.7484662576687117}
+    
+RUS,
+    {axis:"Running Sets",value:0.2397003745318352},
+    {axis:"Faults",value:0.009363295880149813},
+    {axis:"Still sets",value:0.7509363295880149}
+    
+BRA,
+    {axis:"Running Sets",value:0.32098765432098764},
+    {axis:"Faults",value:0.010735373054213635},
+    {axis:"Still sets",value:0.6682769726247987}
+    
+USA,
+    {axis:"Running Sets",value:0.32461024498886415},
+    {axis:"Faults",value:0.008351893095768375},
+    {axis:"Still sets",value:0.6670378619153675}
+    
+POR,
+    {axis:"Running Sets",value:0.2602639296187683},
+    {axis:"Faults",value:0.01466275659824047},
+    {axis:"Still sets",value:0.7250733137829912}
+    
+ARG,
+    {axis:"Running Sets",value:0.3093167701863354},
+    {axis:"Faults",value:0.0068322981366459624},
+    {axis:"Still sets",value:0.6838509316770186}
+    
+POL,
+    {axis:"Running Sets",value:0.3011224987798926},
+    {axis:"Faults",value:0.006832601268911664},
+    {axis:"Still sets",value:0.6920448999511957}
+    
+CHN,
+    {axis:"Running Sets",value:0.29067930489731436},
+    {axis:"Faults",value:0.02132701421800948},
+    {axis:"Still sets",value:0.6879936808846762}
+    
+SRB,
+    {axis:"Running Sets",value:0.24160206718346253},
+    {axis:"Faults",value:0.008397932816537468},
+    {axis:"Still sets",value:0.75}
+    

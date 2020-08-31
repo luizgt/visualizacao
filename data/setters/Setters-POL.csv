@@ -1,0 +1,27 @@
+RANK,SHIRTNUMBER,NAME,TEAM,SPIKES,FAULTS,SHOTS,TOTAL ATTEMPTS,SUCCESS %
+14;4;Marcin Komenda;POL;255;3;416;674;3.23
+28;19;Marcin Janusz;POL;115;2;294;411;1.46
+29;11;Fabian Drzyzga;POL;108;2;137;247;1.37
+30;12;Grzegorz Lomacz;POL;108;1;274;383;1.37
+72;2;Maciej Muzaj;POL;5;1;13;19;0.06
+104;13;Michal Kubiak;POL;3;1;7;11;0.04
+105;22;Bartosz Bednorz;POL;3;0;12;15;0.04
+106;23;Jakub Popiwczak;POL;3;0;42;45;0.04
+107;77;Karol Klos;POL;3;0;19;22;0.04
+131;5;Lukasz Kaczmarek;POL;2;0;10;12;0.03
+132;10;Damian Wojtaszek;POL;2;0;40;42;0.03
+133;14;Aleksander Sliwka;POL;2;2;27;31;0.03
+199;1;Piotr Nowakowski;POL;1;0;1;2;0.01
+200;7;Artur Szalpuk;POL;1;1;6;8;0.01
+201;8;Jedrzej Gruszczynski;POL;1;0;1;2;0.01
+202;15;Jakub Kochanowski;POL;1;0;8;9;0.01
+203;17;Pawel Zatorski;POL;1;0;21;22;0.01
+204;18;Bartosz Kwolek;POL;1;1;35;37;0.01
+205;20;Mateusz Bieniek;POL;1;0;5;6;0.01
+206;27;Piotr Łukasik;POL;1;0;7;8;0.01
+257;3;Dawid Konarski;POL;0;0;8;8;
+258;16;Bartlomiej Boladz;POL;0;0;5;5;
+259;21;Tomasz Fornal;POL;0;0;14;14;
+260;25;Michał Szalacha;POL;0;0;1;1;
+261;28;Bartosz Filipiak;POL;0;0;2;2;
+262;99;Norbert Huber;POL;0;0;13;13;

@@ -1,0 +1,81 @@
+RANK,SHIRTNUMBER,NAME,TEAM,EXCELLENTS,FAULTS,SERVE_RECEPTIONS,TOTAL ATTEMPTS,EFFICIENCY
+BRA,
+    {axis:"Excellents",value:0.17523364485981308},
+    {axis:"Faults",value:0.07398753894080996},
+    {axis:"Serve Receptions",value:0.7507788161993769}
+    
+POR,
+    {axis:"Excellents",value:0.2181996086105675},
+    {axis:"Faults",value:0.07534246575342465},
+    {axis:"Serve Receptions",value:0.7064579256360078}
+    
+ARG,
+    {axis:"Excellents",value:0.20092165898617512},
+    {axis:"Faults",value:0.055299539170506916},
+    {axis:"Serve Receptions",value:0.743778801843318}
+    
+USA,
+    {axis:"Excellents",value:0.1937984496124031},
+    {axis:"Faults",value:0.05503875968992248},
+    {axis:"Serve Receptions",value:0.7511627906976744}
+    
+GER,
+    {axis:"Excellents",value:0.18916666666666668},
+    {axis:"Faults",value:0.06333333333333334},
+    {axis:"Serve Receptions",value:0.7475}
+    
+AUS,
+    {axis:"Excellents",value:0.1918181818181818},
+    {axis:"Faults",value:0.08272727272727273},
+    {axis:"Serve Receptions",value:0.7254545454545455}
+    
+JPN,
+    {axis:"Excellents",value:0.2078754578754579},
+    {axis:"Faults",value:0.0641025641025641},
+    {axis:"Serve Receptions",value:0.728021978021978}
+    
+IRI,
+    {axis:"Excellents",value:0.17028985507246377},
+    {axis:"Faults",value:0.05615942028985507},
+    {axis:"Serve Receptions",value:0.7735507246376812}
+    
+SRB,
+    {axis:"Excellents",value:0.17754569190600522},
+    {axis:"Faults",value:0.07919930374238468},
+    {axis:"Serve Receptions",value:0.7432550043516101}
+    
+BUL,
+    {axis:"Excellents",value:0.18289353958143767},
+    {axis:"Faults",value:0.0746132848043676},
+    {axis:"Serve Receptions",value:0.7424931756141947}
+    
+CHN,
+    {axis:"Excellents",value:0.18706467661691542},
+    {axis:"Faults",value:0.08756218905472637},
+    {axis:"Serve Receptions",value:0.7253731343283583}
+    
+ITA,
+    {axis:"Excellents",value:0.15606936416184972},
+    {axis:"Faults",value:0.06647398843930635},
+    {axis:"Serve Receptions",value:0.7774566473988439}
+    
+RUS,
+    {axis:"Excellents",value:0.17478991596638654},
+    {axis:"Faults",value:0.06638655462184874},
+    {axis:"Serve Receptions",value:0.7588235294117647}
+    
+POL,
+    {axis:"Excellents",value:0.1836019621583742},
+    {axis:"Faults",value:0.06306937631394534},
+    {axis:"Serve Receptions",value:0.7533286615276804}
+    
+CAN,
+    {axis:"Excellents",value:0.16635514018691588},
+    {axis:"Faults",value:0.07570093457943926},
+    {axis:"Serve Receptions",value:0.7579439252336448}
+    
+FRA,
+    {axis:"Excellents",value:0.18476357267950963},
+    {axis:"Faults",value:0.050788091068301226},
+    {axis:"Serve Receptions",value:0.7644483362521891}
+    

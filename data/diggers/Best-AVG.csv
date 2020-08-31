@@ -1,0 +1,81 @@
+RANK,SHIRTNUMBER,NAME,TEAM,DIGS,FAULTS,RECEPTIONS,TOTAL ATTEMPTS,AVERAGE PER SET 
+ARG,
+    {axis:"digs",value:0.5306122448979592},
+    {axis:"Faults",value:0.2030612244897959},
+    {axis:"receptions",value:0.26632653061224487}
+    
+ITA,
+    {axis:"digs",value:0.5065502183406113},
+    {axis:"Faults",value:0.21943231441048036},
+    {axis:"receptions",value:0.2740174672489083}
+    
+AUS,
+    {axis:"digs",value:0.4816223067173637},
+    {axis:"Faults",value:0.23827629911280102},
+    {axis:"receptions",value:0.28010139416983526}
+    
+GER,
+    {axis:"digs",value:0.4921875},
+    {axis:"Faults",value:0.21316964285714285},
+    {axis:"receptions",value:0.29464285714285715}
+    
+FRA,
+    {axis:"digs",value:0.523671497584541},
+    {axis:"Faults",value:0.18357487922705315},
+    {axis:"receptions",value:0.2927536231884058}
+    
+IRI,
+    {axis:"digs",value:0.5464876033057852},
+    {axis:"Faults",value:0.1756198347107438},
+    {axis:"receptions",value:0.27789256198347106}
+    
+RUS,
+    {axis:"digs",value:0.5513905683192262},
+    {axis:"Faults",value:0.2249093107617896},
+    {axis:"receptions",value:0.22370012091898428}
+    
+JPN,
+    {axis:"digs",value:0.5},
+    {axis:"Faults",value:0.19421487603305784},
+    {axis:"receptions",value:0.30578512396694213}
+    
+BRA,
+    {axis:"digs",value:0.5596412556053811},
+    {axis:"Faults",value:0.19103139013452916},
+    {axis:"receptions",value:0.24932735426008967}
+    
+POR,
+    {axis:"digs",value:0.4501347708894879},
+    {axis:"Faults",value:0.2628032345013477},
+    {axis:"receptions",value:0.28706199460916443}
+    
+SRB,
+    {axis:"digs",value:0.45127610208816704},
+    {axis:"Faults",value:0.26102088167053367},
+    {axis:"receptions",value:0.2877030162412993}
+    
+USA,
+    {axis:"digs",value:0.5048923679060665},
+    {axis:"Faults",value:0.19765166340508805},
+    {axis:"receptions",value:0.2974559686888454}
+    
+CAN,
+    {axis:"digs",value:0.49837486457204766},
+    {axis:"Faults",value:0.2372697724810401},
+    {axis:"receptions",value:0.26435536294691225}
+    
+CHN,
+    {axis:"digs",value:0.4144385026737968},
+    {axis:"Faults",value:0.30614973262032086},
+    {axis:"receptions",value:0.27941176470588236}
+    
+POL,
+    {axis:"digs",value:0.47761194029850745},
+    {axis:"Faults",value:0.24958540630182421},
+    {axis:"receptions",value:0.2728026533996683}
+    
+BUL,
+    {axis:"digs",value:0.47808764940239046},
+    {axis:"Faults",value:0.2204515272244356},
+    {axis:"receptions",value:0.301460823373174}
+    

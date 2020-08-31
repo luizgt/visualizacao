@@ -1,0 +1,14 @@
+{
+  "name": "7b8184c653a39278",
+  "main": "7b8184c653a39278@349.js",
+  "version": "349.0.0",
+  "homepage": "https://observablehq.com/d/7b8184c653a39278",
+  "author": {
+    "name": "Luiz Guilherme",
+    "url": "https://observablehq.com/@luizgt"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

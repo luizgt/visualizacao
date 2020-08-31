@@ -1,0 +1,14 @@
+{
+  "name": "cbb1e5af060a2211",
+  "main": "cbb1e5af060a2211@162.js",
+  "version": "162.0.0",
+  "homepage": "https://observablehq.com/d/cbb1e5af060a2211",
+  "author": {
+    "name": "Luiz Guilherme",
+    "url": "https://observablehq.com/@luizgt"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

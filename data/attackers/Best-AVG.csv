@@ -1,0 +1,81 @@
+RANK,SHIRTNUMBER,NAME,TEAM,SPIKES,FAULTS,SHOTS,TOTAL ATTEMPTS,SUCCESS% 
+ARG,
+    {axis:"Spikes",value:0.4978540772532189},
+    {axis:"Faults",value:0.14101778050275904},
+    {axis:"Shots",value:0.36112814224402207}
+    
+IRI,
+    {axis:"Spikes",value:0.49725442342892007},
+    {axis:"Faults",value:0.14093959731543623},
+    {axis:"Shots",value:0.3618059792556437}
+    
+BRA,
+    {axis:"Spikes",value:0.5298826040554963},
+    {axis:"Faults",value:0.15795090715048027},
+    {axis:"Shots",value:0.3121664887940235}
+    
+CAN,
+    {axis:"Spikes",value:0.4931057124097177},
+    {axis:"Faults",value:0.15298752462245568},
+    {axis:"Shots",value:0.35390676296782664}
+    
+JPN,
+    {axis:"Spikes",value:0.47948560930802203},
+    {axis:"Faults",value:0.16044090630740968},
+    {axis:"Shots",value:0.36007348438456827}
+    
+RUS,
+    {axis:"Spikes",value:0.5229920294297977},
+    {axis:"Faults",value:0.1637032495401594},
+    {axis:"Shots",value:0.3133047210300429}
+    
+ITA,
+    {axis:"Spikes",value:0.4820846905537459},
+    {axis:"Faults",value:0.1563517915309446},
+    {axis:"Shots",value:0.36156351791530944}
+    
+BUL,
+    {axis:"Spikes",value:0.4752613240418119},
+    {axis:"Faults",value:0.17630662020905924},
+    {axis:"Shots",value:0.34843205574912894}
+    
+FRA,
+    {axis:"Spikes",value:0.4802065404475043},
+    {axis:"Faults",value:0.18301778542742397},
+    {axis:"Shots",value:0.3367756741250717}
+    
+GER,
+    {axis:"Spikes",value:0.4677127338563669},
+    {axis:"Faults",value:0.1623415811707906},
+    {axis:"Shots",value:0.36994568497284247}
+    
+AUS,
+    {axis:"Spikes",value:0.462707182320442},
+    {axis:"Faults",value:0.1850828729281768},
+    {axis:"Shots",value:0.35220994475138123}
+    
+POR,
+    {axis:"Spikes",value:0.4565537555228277},
+    {axis:"Faults",value:0.1796759941089838},
+    {axis:"Shots",value:0.3637702503681885}
+    
+CHN,
+    {axis:"Spikes",value:0.45085296506904954},
+    {axis:"Faults",value:0.16328188464662877},
+    {axis:"Shots",value:0.38586515028432167}
+    
+USA,
+    {axis:"Spikes",value:0.4997269251774986},
+    {axis:"Faults",value:0.1567449481157837},
+    {axis:"Shots",value:0.3435281267067176}
+    
+SRB,
+    {axis:"Spikes",value:0.4961089494163424},
+    {axis:"Faults",value:0.1582360570687419},
+    {axis:"Shots",value:0.3456549935149157}
+    
+POL,
+    {axis:"Spikes",value:0.487627365356623},
+    {axis:"Faults",value:0.1445900048520136},
+    {axis:"Shots",value:0.3677826297913634}
+    
