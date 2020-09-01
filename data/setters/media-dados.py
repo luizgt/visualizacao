@@ -1,8 +1,8 @@
 from string import Template
 
 arquivoFonte = "./attackers/BestAttackers.csv"
-arq = open("./attackers/Best-AVG.csv","w")
-# arq.write("RANK,SHIRTNUMBER,NAME,TEAM,SPIKES,FAULTS,SHOTS,TOTAL ATTEMPTS,SUCCESS %\n")
+arq = open("./attackers/Best-CSV.csv","w")
+arq.write("RANK,SHIRTNUMBER,NAME,TEAM,SPIKES,FAULTS,SHOTS,TOTAL ATTEMPTS,SUCCESS %\n")
 
 linhas = open(arquivoFonte)
 # 1,12,Bruno Lima,ARG,177,50,98,325,54.46

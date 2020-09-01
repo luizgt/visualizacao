@@ -1,8 +1,6 @@
-from string import Template
-
-arquivoFonte = "./attackers/BestAttackers.csv"
-arq = open("./attackers/Best-AVG.csv","w")
-# arq.write("RANK,SHIRTNUMBER,NAME,TEAM,SPIKES,FAULTS,SHOTS,TOTAL ATTEMPTS,SUCCESS %\n")
+arquivoFonte = "./data/attackers/BestAttackers.csv"
+arq = open("./data/attackers/Best-CSV.csv","w")
+arq.write("TEAM,SPIKES,FAULTS,SHOTS,TOTAL_ATTEMPTS\n")
 
 linhas = open(arquivoFonte)
 # 1,12,Bruno Lima,ARG,177,50,98,325,54.46
@@ -32,23 +30,22 @@ for linha in linhas:
 #fazendo as operacoes nos jogadores separados por pais na lista
 for i in range(0,16):
     pais =  list_paises[i]["name"] #pegando o nome do pais
-    attacks = []
-    blocks = []
-    serves = []
+    
+    spikes = []
+    faults = []
+    shots = []
     total = []
+    success = []
+    
     for dado in list_paises[i]["dados"]:
-        attacks.append(int(dado.split(",")[4]))
-        blocks.append(int(dado.split(",")[5]))
-        serves.append(int(dado.split(",")[6]))
+        spikes.append(int(dado.split(",")[4]))
+        faults.append(int(dado.split(",")[5]))
+        shots.append(int(dado.split(",")[6]))
         total.append(int(dado.split(",")[7]))
+
     tot = sum(total)
-    att = sum(attacks)/tot
-    blo = sum(blocks)/tot
-    ser = sum(serves)/tot
-    string_aux = Template('''$pais,
-    {axis:"Attacks",value:$att},
-    {axis:"Blocks",value:$blo},
-    {axis:"Serves",value:$ser}
-    ''')
-    string = string_aux.substitute(pais=pais,att=att,blo=blo,ser=ser)
-    arq.write(string + "\n")
+    spks = sum(spikes)/tot
+    flts = sum(faults)/tot
+    shts = sum(shots)/tot
+    
+    arq.write("%s, %f, %f, %f, %f \n" % (pais, spks, flts, shts, tot))
