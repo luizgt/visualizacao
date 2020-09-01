@@ -1,5 +1,5 @@
 arquivoFonte = "./data/attackers/BestAttackers.csv"
-arq = open("./data/attackers/Best-CSV.csv","w")
+arq = open("./data/attackers/Total-CSV.csv","w")
 arq.write("TEAM,SPIKES,FAULTS,SHOTS,TOTAL_ATTEMPTS\n")
 
 linhas = open(arquivoFonte)
@@ -44,8 +44,8 @@ for i in range(0,16):
         total.append(int(dado.split(",")[7]))
 
     tot = sum(total)
-    spks = sum(spikes)/tot
-    flts = sum(faults)/tot
-    shts = sum(shots)/tot
+    spks = sum(spikes)
+    flts = sum(faults)
+    shts = sum(shots)
     
     arq.write("%s, %f, %f, %f, %f \n" % (pais, spks, flts, shts, tot))
