@@ -12,6 +12,16 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 300;
+            fill: #242424;
+            text-align: center;
+            text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+            cursor: default;
+        }
+
         .bubbles {
             stroke-width: 2px;
             stroke: white;
@@ -20,29 +30,75 @@
         .bubbles:hover {
             stroke: black;
         }
+
+        .botoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        .linha-botoes {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .visu {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn.btn-primary {
+            margin: 5px;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .visu {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <button class="btn btn-primary" onclick="update('ARG')">Argentina</button>
-    <button class="btn btn-primary" onclick="update('AUS')">Austrália</button>
-    <button class="btn btn-primary" onclick="update('BRA')">Brasil</button>
-    <button class="btn btn-primary" onclick="update('BUL')">Bulgária</button>
-    <button class="btn btn-primary" onclick="update('CAN')">Canadá</button>
-    <button class="btn btn-primary" onclick="update('CHN')">China</button>
-    <button class="btn btn-primary" onclick="update('USA')">Estados Unidos</button>
-    <button class="btn btn-primary" onclick="update('FRA')">França</button>
-    <button class="btn btn-primary" onclick="update('GER')">Alemanha</button>
-    <button class="btn btn-primary" onclick="update('IRI')">Irã</button>
-    <button class="btn btn-primary" onclick="update('ITA')">Itália</button>
-    <button class="btn btn-primary" onclick="update('JPN')">Japão</button>
-    <button class="btn btn-primary" onclick="update('POL')">Polônia</button>
-    <button class="btn btn-primary" onclick="update('POR')">Portugal</button>
-    <button class="btn btn-primary" onclick="update('RUS')">Rússia</button>
-    <button class="btn btn-primary" onclick="update('SRB')">Sérvia</button>
+    <h1>
+        Melhores líberos
+    </h1>
 
-    <!-- Create a div where the graph will take place -->
-    <div id="my_dataviz"></div>
+    <div class="visu">
+        <div class="botoes">
+            <div class="linha-botoes">
+                <button class="btn btn-primary" onclick="update('ARG')">Argentina</button>
+                <button class="btn btn-primary" onclick="update('AUS')">Austrália</button>
+                <button class="btn btn-primary" onclick="update('BRA')">Brasil</button>
+                <button class="btn btn-primary" onclick="update('BUL')">Bulgária</button>
+            </div>
+            <div class="linha-botoes">
+                <button class="btn btn-primary" onclick="update('CAN')">Canadá</button>
+                <button class="btn btn-primary" onclick="update('IRI')">Irã</button>
+                <button class="btn btn-primary" onclick="update('CHN')">China</button>
+                <button class="btn btn-primary" onclick="update('FRA')">França</button>
+            </div>
+            <div class="linha-botoes">
+                <button class="btn btn-primary" onclick="update('GER')">Alemanha</button>
+                <button class="btn btn-primary" onclick="update('USA')">Estados Unidos</button>
+                <button class="btn btn-primary" onclick="update('ITA')">Itália</button>
+                <button class="btn btn-primary" onclick="update('JPN')">Japão</button>
+            </div>
+            <div class="linha-botoes">
+                <button class="btn btn-primary" onclick="update('POL')">Polônia</button>
+                <button class="btn btn-primary" onclick="update('POR')">Portugal</button>
+                <button class="btn btn-primary" onclick="update('RUS')">Rússia</button>
+                <button class="btn btn-primary" onclick="update('SRB')">Sérvia</button>
+            </div>
+        </div>
+        <!-- Create a div where the graph will take place -->
+        <div id="my_dataviz"></div>
+    </div>
+
+
 
 </body>
 <script>
@@ -76,7 +132,7 @@
             "translate(300, 535)")
         .style("text-anchor", "middle")
         .text("Digs");
-    
+
     // Add X axis
     var x = d3.scaleLinear()
         .domain([0, 125])
