@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Zoomable Sunburst</title>
-<link rel="stylesheet" type="text/css" href="./inspector.css">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zoomable Sunburst</title>
+    <link rel="stylesheet" type="text/css" href="./inspector.css">
+    <link rel="icon" type="image/png" href="./../volei-icon.png">
+    <style>
+        .observablehq span {
+            display: none;
+        }
+
+        .observablehq {
+            font-size: 20px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            /* font-size: 20px; */
+            cursor: default;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.2;
+            color: #242424;
+        }
+    </style>
+</head>
+
 <body>
-<script type="module">
+    <h1>Média de Ataques</h1>
 
-import define from "./index.js";
-import {Runtime, Library, Inspector} from "./runtime.js";
+    <script type="module">
 
-const runtime = new Runtime();
-const main = runtime.module(define, Inspector.into(document.body));
+        import define from "./index.js";
+        import { Runtime, Library, Inspector } from "./runtime.js";
 
-</script>
+        const runtime = new Runtime();
+        const main = runtime.module(define, Inspector.into(document.body));
+
+    </script>
