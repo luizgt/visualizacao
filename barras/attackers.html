@@ -5,11 +5,14 @@
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 <!-- Add 2 buttons -->
-<button onclick="update('SPIKES')">SPIKES</button>
-<button onclick="update('TOTAL_ATTEMPTS')">Total Attempts</button>
-<button onclick="update('FAULTS')">Faults</button>
-<button onclick="update('SHOTS')">Shots</button>
+<button class="btn btn-primary" onclick="update('SPIKES')">SPIKES</button>
+<button class="btn btn-primary" onclick="update('TOTAL_ATTEMPTS')">Total Attempts</button>
+<button class="btn btn-primary" onclick="update('FAULTS')">Faults</button>
+<button class="btn btn-primary" onclick="update('SHOTS')">Shots</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
