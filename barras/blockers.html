@@ -1,92 +1,135 @@
 <!-- Code from d3-graph-gallery.com -->
 <!DOCTYPE html>
-<meta charset="utf-8">
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Média de Bloqueios</title>
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        
-<!-- Add 2 buttons -->
-<button class="btn btn-primary" onclick="update('STUFF_BLOCKS')">Stuff blocks</button>
-<button class="btn btn-primary" onclick="update('FAULTS')">Faults</button>
-<button class="btn btn-primary" onclick="update('REBOUNDS')">Rebounds</button>
-<button class="btn btn-primary" onclick="update('TOTAL_ATTEMPTS')">Total Attempts</button>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+  <link rel="icon" type="image/png" href="./../volei-icon.png">
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      fill: #242424;
+      text-align: center;
+      text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+      cursor: default;
+    }
+
+    .visu {
+      display: flex;
+      justify-content: center;
+    }
+
+    .botoes {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .btn.btn-primary {
+      margin: 20px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      .visu {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Média de Bloqueios</h1>
+  <div class="visu">
+    <div class="botoes">
+      <button class="btn btn-primary" onclick="update('STUFF_BLOCKS')">Stuff blocks</button>
+      <button class="btn btn-primary" onclick="update('FAULTS')">Faults</button>
+      <button class="btn btn-primary" onclick="update('REBOUNDS')">Rebounds</button>
+      <button class="btn btn-primary" onclick="update('TOTAL_ATTEMPTS')">Total Attempts</button>
+    </div>
+    <div id="my_dataviz"></div>
+  </div>
+  <!-- Create a div where the graph will take place -->
+</body>
 
 
 <script>
 
-// set the dimensions and margins of the graph
-var margin = {top: 30, right: 30, bottom: 70, left: 60},
+  // set the dimensions and margins of the graph
+  var margin = { top: 30, right: 30, bottom: 70, left: 60 },
     width = 700 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
-// append the svg object to the body of the page
-var svg = d3.select("#my_dataviz")
-  .append("svg")
+  // append the svg object to the body of the page
+  var svg = d3.select("#my_dataviz")
+    .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
-  .append("g")
+    .append("g")
     .attr("transform",
-          "translate(" + margin.left + "," + margin.top + ")");
+      "translate(" + margin.left + "," + margin.top + ")");
 
-// Initialize the X axis
-var x = d3.scaleBand()
-  .range([ 0, width ])
-  .padding(0.2);
-var xAxis = svg.append("g")
-  .attr("transform", "translate(0," + height + ")")
+  // Initialize the X axis
+  var x = d3.scaleBand()
+    .range([0, width])
+    .padding(0.2);
+  var xAxis = svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
 
-// Initialize the Y axis
-var y = d3.scaleLinear()
-  .range([ height, 0]);
-var yAxis = svg.append("g")
-  .attr("class", "myYaxis")
+  // Initialize the Y axis
+  var y = d3.scaleLinear()
+    .range([height, 0]);
+  var yAxis = svg.append("g")
+    .attr("class", "myYaxis")
 
 
-// A function that create / update the plot for a given variable:
-function update(selectedVar) {
+  // A function that create / update the plot for a given variable:
+  function update(selectedVar) {
 
-  // Parse the Data
-  d3.csv("./../data/blockers/Best-CSV.csv", function(data) {
+    // Parse the Data
+    d3.csv("./../data/blockers/Best-CSV.csv", function (data) {
 
-    // X axis
-    x.domain(data.map(function(d) { return d.TEAM; }))
-    xAxis.transition().duration(1000).call(d3.axisBottom(x))
+      // X axis
+      x.domain(data.map(function (d) { return d.TEAM; }))
+      xAxis.transition().duration(1000).call(d3.axisBottom(x))
 
-    // Add Y axis
-    y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
-    yAxis.transition().duration(1000).call(d3.axisLeft(y));
+      // Add Y axis
+      y.domain([0, d3.max(data, function (d) { return +d[selectedVar] })]);
+      yAxis.transition().duration(1000).call(d3.axisLeft(y));
 
-    // variable u: map data to existing bars
-    var u = svg.selectAll("rect")
-      .data(data)
+      // variable u: map data to existing bars
+      var u = svg.selectAll("rect")
+        .data(data)
 
-    var myColor = d3.scaleOrdinal()
-    .domain(["ARG", "AUS", "BRA", "BUL", "CAN", "CHN", "FRA", "GER", "IRI", "ITA", "JPN", "POL", "POR", "RUS", "SRB", "USA"])
-    .range(d3.schemeCategory20);
-    // update bars
-    u
-      .enter()
-      .append("rect")
-      .merge(u)
-      .transition()
-      .duration(1000)
-        .attr("x", function(d) { return x(d.TEAM); })
-        .attr("y", function(d) { return y(d[selectedVar]); })
-        .style("fill", function (d) { return myColor(d.TEAM)})
+      var myColor = d3.scaleOrdinal()
+        .domain(["ARG", "AUS", "BRA", "BUL", "CAN", "CHN", "FRA", "GER", "IRI", "ITA", "JPN", "POL", "POR", "RUS", "SRB", "USA"])
+        .range(d3.schemeCategory20);
+      // update bars
+      u
+        .enter()
+        .append("rect")
+        .merge(u)
+        .transition()
+        .duration(1000)
+        .attr("x", function (d) { return x(d.TEAM); })
+        .attr("y", function (d) { return y(d[selectedVar]); })
+        .style("fill", function (d) { return myColor(d.TEAM) })
         .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d[selectedVar]); })
+        .attr("height", function (d) { return height - y(d[selectedVar]); })
         .attr("fill", "#69b3a2")
-  })
+    })
 
-}
+  }
 
-// Initialize plot
-update('TOTAL_ATTEMPTS')
+  // Initialize plot
+  update('TOTAL_ATTEMPTS')
 
 </script>

@@ -46,103 +46,135 @@
 			display: flex;
 			justify-content: center;
 		}
+
+		.visu {
+			display: flex;
+			justify-content: center;
+		}
+
+		.botoes {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.linha-botoes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.botao {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		label {
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		input {
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 1200px){
+			.visu{
+				flex-direction: column;
+			}
+			.linha-botoes{
+				justify-content: space-around;
+			}
+		}
 	</style>
 
 </head>
 
 <body>
 	<h1>Porcentagem dos melhores pontuadores</h1>
-	<div class="radarChart"></div>
+	<div class="visu">
 
-	<div class="input-group mb-3">
-		<div class="input-group-prepend">
-			<div class="input-group-text">
-				<input type="checkbox" id="ARG" onclick="selecionarPais('ARG')" on
-					aria-label="Checkbox for following text input">
-				Argentina
+		<div class="radarChart"></div>
+
+		<div class="botoes">
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="ARG" onclick="selecionarPais('ARG')">
+					<label for="ARG">Argentina</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="AUS" onclick="selecionarPais('AUS')">
+					<label for="AUS">Austrália</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="BRA" onclick="selecionarPais('BRA')">
+					<label for="BRA">Brasil</label>
+				</div>
 			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="AUS" onclick="selecionarPais('AUS')"
-					aria-label="Checkbox for following text input">
-				Austrália
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="BUL" onclick="selecionarPais('BUL')">
+					<label for="BUL">Bulgária</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="CAN" onclick="selecionarPais('CAN')">
+					<label for="CAN">Canadá</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="CHN" onclick="selecionarPais('CHN')">
+					<label for="CHN">China</label>
+				</div>
 			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="BRA" onclick="selecionarPais('BRA')"
-					aria-label="Checkbox for following text input">
-				Brasil
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="FRA" onclick="selecionarPais('FRA')">
+					<label for="FRA">França</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="GER" onclick="selecionarPais('GER')">
+					<label for="GER">Alemanha</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="IRI" onclick="selecionarPais('IRI')">
+					<label for="IRI">Irã</label>
+				</div>
 			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="BUL" onclick="selecionarPais('BUL')"
-					aria-label="Checkbox for following text input">
-				Bulgária
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="ITA" onclick="selecionarPais('ITA')">
+					<label for="ITA">Itália</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="JPN" onclick="selecionarPais('JPN')">
+					<label for="JPN">Japão</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="POL" onclick="selecionarPais('POL')">
+					<label for="POL">Polônia</label>
+				</div>
 			</div>
-		</div>
-		<div class="input-group-prepend">
-			<div class="input-group-text">
-				<input type="checkbox" id="CAN" onclick="selecionarPais('CAN')"
-					aria-label="Checkbox for following text input">
-				Canadá
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="POR" onclick="selecionarPais('POR')">
+					<label for="POR">Portugal</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="RUS" onclick="selecionarPais('RUS')">
+					<label for="RUS">Rússia</label>
+				</div>
+				<div class="botao">
+					<input type="checkbox" id="SRB" onclick="selecionarPais('SRB')">
+					<label for="SRB">Sérvia</label>
+				</div>
 			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="CHN" onclick="selecionarPais('CHN')"
-					aria-label="Checkbox for following text input">
-				China
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="FRA" onclick="selecionarPais('FRA')"
-					aria-label="Checkbox for following text input">
-				França
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="GER" onclick="selecionarPais('GER')"
-					aria-label="Checkbox for following text input">
-				Alemanha
-			</div>
-		</div>
-		<div class="input-group-prepend">
-			<div class="input-group-text">
-				<input type="checkbox" id="IRI" onclick="selecionarPais('IRI')"
-					aria-label="Checkbox for following text input">
-				Irã
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="ITA" onclick="selecionarPais('ITA')"
-					aria-label="Checkbox for following text input">
-				Itália
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="JPN" onclick="selecionarPais('JPN')"
-					aria-label="Checkbox for following text input">
-				Japão
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="POL" onclick="selecionarPais('POL')"
-					aria-label="Checkbox for following text input">
-				Polônia
-			</div>
-		</div>
-		<div class="input-group-prepend">
-			<div class="input-group-text">
-				<input type="checkbox" id="POR" onclick="selecionarPais('POR')"
-					aria-label="Checkbox for following text input">
-				Portugal
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="RUS" onclick="selecionarPais('RUS')"
-					aria-label="Checkbox for following text input">
-				Rússia
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="SRB" onclick="selecionarPais('SRB')"
-					aria-label="Checkbox for following text input">
-				Sérvia
-			</div>
-			<div class="input-group-text">
-				<input type="checkbox" id="USA" onclick="selecionarPais('USA')"
-					aria-label="Checkbox for following text input">
-				Estados Unidos
+			<div class="linha-botoes">
+				<div class="botao">
+					<input type="checkbox" id="USA" onclick="selecionarPais('USA')">
+					<label for="USA">Estados Unidos</label>
+				</div>
 			</div>
 		</div>
+
+	</div>
 	</div>
 
 	<script src="radarChart.js"></script>
@@ -254,7 +286,6 @@
 				{ axis: "Shots", value: 0.3456549935149157 }
 			],
 			[
-				{ pais: "USA" },
 				{ axis: "Spikes", value: 0.487627365356623 },
 				{ axis: "Faults", value: 0.1445900048520136 },
 				{ axis: "Shots", value: 0.3677826297913634 }
@@ -262,22 +293,22 @@
 		];
 
 		var posPaises = {
-			ARG:{DIC: 0, POS: -1},
-			AUS: {DIC: 1, POS: -1},
-			BRA: {DIC: 2, POS: -1},
-			BUL: {DIC: 3, POS: -1},
-			CAN: {DIC: 4, POS: -1},
-			CHN: {DIC: 5, POS: -1},
-			FRA: {DIC: 6, POS: -1},
-			GER: {DIC: 7, POS: -1},
-			IRI: {DIC: 8, POS: -1},
-			ITA: {DIC: 9, POS: -1},
-			JPN: {DIC: 10, POS: -1},
-			POL: {DIC: 11, POS: -1},
-			POR: {DIC: 12, POS: -1},
-			RUS: {DIC: 13, POS: -1},
-			SRB: {DIC: 14, POS: -1},
-			USA: {DIC: 15, POS: -1}
+			ARG: { DIC: 0, POS: -1 },
+			AUS: { DIC: 1, POS: -1 },
+			BRA: { DIC: 2, POS: -1 },
+			BUL: { DIC: 3, POS: -1 },
+			CAN: { DIC: 4, POS: -1 },
+			CHN: { DIC: 5, POS: -1 },
+			FRA: { DIC: 6, POS: -1 },
+			GER: { DIC: 7, POS: -1 },
+			IRI: { DIC: 8, POS: -1 },
+			ITA: { DIC: 9, POS: -1 },
+			JPN: { DIC: 10, POS: -1 },
+			POL: { DIC: 11, POS: -1 },
+			POR: { DIC: 12, POS: -1 },
+			RUS: { DIC: 13, POS: -1 },
+			SRB: { DIC: 14, POS: -1 },
+			USA: { DIC: 15, POS: -1 }
 		}
 
 		var data = [
