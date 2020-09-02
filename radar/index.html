@@ -1,84 +1,312 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
-		<title>Smoothed D3.js Radar Chart</title>
 
-		<!-- Google fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>Smoothed D3.js Radar Chart</title>
 
-		<!-- D3.js -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-		
-		<style>
-			body {
-				font-family: 'Open Sans', sans-serif;
-				font-size: 11px;
-				font-weight: 300;
-				fill: #242424;
-				text-align: center;
-				text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
-				cursor: default;
-			}
-			
-			.legend {
-				font-family: 'Raleway', sans-serif;
-				fill: #333333;
-			}
-			
-			.tooltip {
-				fill: #333333;
-			}
-		</style>
-	
-	</head>
-	<body>
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
-		<div class="radarChart"></div>
+	<!-- D3.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
-		<script src="radarChart.js"></script>	
-		<script>
-      
-      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
-      
-			////////////////////////////////////////////////////////////// 
-			//////////////////////// Set-Up ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
+	<link rel="icon" type="image/png" href="./../volei-icon.png">
 
-			var margin = {top: 100, right: 100, bottom: 100, left: 100},
-				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
-				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
-					
-			////////////////////////////////////////////////////////////// 
-			////////////////////////// Data ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-			var data = [
-					  	[	
-						  	{axis:"Attacks",value:0.8001611603545528},
-    						{axis:"Blocks",value:0.12731668009669622},
-    						{axis:"Serves",value:0.072522159548751}
-						]
-					];
-			////////////////////////////////////////////////////////////// 
-			//////////////////// Draw the Chart ////////////////////////// 
-			////////////////////////////////////////////////////////////// 
 
-			var color = d3.scale.ordinal()
-				.range(["#EDC951","#CC333F","#00A0B0"]);
-				
-			var radarChartOptions = {
-			  w: width,
-			  h: height,
-			  margin: margin,
-			  maxValue: 0.5,
-			  levels: 5,
-			  roundStrokes: true,
-			  color: color
-			};
-			//Call function to draw the Radar chart
-			RadarChart(".radarChart", data, radarChartOptions);
-		</script>
-	</body>
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 11px;
+			font-weight: 300;
+			fill: #242424;
+			text-align: center;
+			text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+			cursor: default;
+		}
+
+		.legend {
+			font-family: 'Raleway', sans-serif;
+			fill: #333333;
+		}
+
+		.tooltip {
+			fill: #333333;
+		}
+
+		input {
+			margin-right: 5px;
+		}
+
+		.input-group.mb-3 {
+			display: flex;
+			justify-content: center;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="radarChart"></div>
+
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				<input type="checkbox" id="ARG" onclick="selecionarPais('ARG')" on
+					aria-label="Checkbox for following text input">
+				Argentina
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="AUS" onclick="selecionarPais('AUS')"
+					aria-label="Checkbox for following text input">
+				Austrália
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="BRA" onclick="selecionarPais('BRA')"
+					aria-label="Checkbox for following text input">
+				Brasil
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="BUL" onclick="selecionarPais('BUL')"
+					aria-label="Checkbox for following text input">
+				Bulgária
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				<input type="checkbox" id="CAN" onclick="selecionarPais('CAN')"
+					aria-label="Checkbox for following text input">
+				Canadá
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="CHN" onclick="selecionarPais('CHN')"
+					aria-label="Checkbox for following text input">
+				China
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="FRA" onclick="selecionarPais('FRA')"
+					aria-label="Checkbox for following text input">
+				França
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="GER" onclick="selecionarPais('GER')"
+					aria-label="Checkbox for following text input">
+				Alemanha
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				<input type="checkbox" id="IRI" onclick="selecionarPais('IRI')"
+					aria-label="Checkbox for following text input">
+				Irã
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="ITA" onclick="selecionarPais('ITA')"
+					aria-label="Checkbox for following text input">
+				Itália
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="JPN" onclick="selecionarPais('JPN')"
+					aria-label="Checkbox for following text input">
+				Japão
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="POL" onclick="selecionarPais('POL')"
+					aria-label="Checkbox for following text input">
+				Polônia
+			</div>
+		</div>
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				<input type="checkbox" id="POR" onclick="selecionarPais('POR')"
+					aria-label="Checkbox for following text input">
+				Portugal
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="RUS" onclick="selecionarPais('RUS')"
+					aria-label="Checkbox for following text input">
+				Rússia
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="SRB" onclick="selecionarPais('SRB')"
+					aria-label="Checkbox for following text input">
+				Sérvia
+			</div>
+			<div class="input-group-text">
+				<input type="checkbox" id="USA" onclick="selecionarPais('USA')"
+					aria-label="Checkbox for following text input">
+				Estados Unidos
+			</div>
+		</div>
+	</div>
+
+	<script src="radarChart.js"></script>
+	<script>
+
+		/* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+
+		////////////////////////////////////////////////////////////// 
+		//////////////////////// Set-Up ////////////////////////////// 
+		////////////////////////////////////////////////////////////// 
+
+		var margin = { top: 100, right: 100, bottom: 100, left: 100 },
+			width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+			height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+		////////////////////////////////////////////////////////////// 
+		////////////////////////// Data ////////////////////////////// 
+		////////////////////////////////////////////////////////////// 
+
+		const dadosPaises = [
+			[
+				// { pais: "ARG" },
+				{ axis: "Spikes", value: 0.4978540772532189 },
+				{ axis: "Faults", value: 0.14101778050275904 },
+				{ axis: "Shots", value: 0.36112814224402207 }
+			],
+			[
+				// { pais: "AUS" },
+				{ axis: "Spikes", value: 0.49725442342892007 },
+				{ axis: "Faults", value: 0.14093959731543623 },
+				{ axis: "Shots", value: 0.3618059792556437 }
+			],
+			[
+				// { pais: "BRA" },
+				{ axis: "Spikes", value: 0.5298826040554963 },
+				{ axis: "Faults", value: 0.15795090715048027 },
+				{ axis: "Shots", value: 0.3121664887940235 }
+			],
+			[
+				// { pais: "BUL" },
+				{ axis: "Spikes", value: 0.4931057124097177 },
+				{ axis: "Faults", value: 0.15298752462245568 },
+				{ axis: "Shots", value: 0.35390676296782664 }
+			],
+			[
+				// { pais: "CAN" },
+				{ axis: "Spikes", value: 0.47948560930802203 },
+				{ axis: "Faults", value: 0.16044090630740968 },
+				{ axis: "Shots", value: 0.36007348438456827 }
+			],
+			[
+				// { pais: "CHN" },
+				{ axis: "Spikes", value: 0.5229920294297977 },
+				{ axis: "Faults", value: 0.1637032495401594 },
+				{ axis: "Shots", value: 0.3133047210300429 }
+			],
+			[
+				// { pais: "FRA" },
+				{ axis: "Spikes", value: 0.4820846905537459 },
+				{ axis: "Faults", value: 0.1563517915309446 },
+				{ axis: "Shots", value: 0.36156351791530944 }
+			],
+			[
+				// { pais: "GER" },
+				{ axis: "Spikes", value: 0.4752613240418119 },
+				{ axis: "Faults", value: 0.17630662020905924 },
+				{ axis: "Shots", value: 0.34843205574912894 }
+			],
+			[
+				// { pais: "IRI" },
+				{ axis: "Spikes", value: 0.4802065404475043 },
+				{ axis: "Faults", value: 0.18301778542742397 },
+				{ axis: "Shots", value: 0.3367756741250717 }
+			],
+			[
+				// { pais: "ITA" },
+				{ axis: "Spikes", value: 0.4677127338563669 },
+				{ axis: "Faults", value: 0.1623415811707906 },
+				{ axis: "Shots", value: 0.36994568497284247 }
+			],
+			[
+				// { pais: "JPN" },
+				{ axis: "Spikes", value: 0.462707182320442 },
+				{ axis: "Faults", value: 0.1850828729281768 },
+				{ axis: "Shots", value: 0.35220994475138123 }
+			],
+			[
+				// { pais: "POL" },
+				{ axis: "Spikes", value: 0.4565537555228277 },
+				{ axis: "Faults", value: 0.1796759941089838 },
+				{ axis: "Shots", value: 0.3637702503681885 }
+			],
+			[
+				// { pais: "POR" },
+				{ axis: "Spikes", value: 0.45085296506904954 },
+				{ axis: "Faults", value: 0.16328188464662877 },
+				{ axis: "Shots", value: 0.38586515028432167 }
+			],
+			[
+				// { pais: "RUS" },
+				{ axis: "Spikes", value: 0.4997269251774986 },
+				{ axis: "Faults", value: 0.1567449481157837 },
+				{ axis: "Shots", value: 0.3435281267067176 }
+			],
+			[
+				// { pais: "SRB" },
+				{ axis: "Spikes", value: 0.4961089494163424 },
+				{ axis: "Faults", value: 0.1582360570687419 },
+				{ axis: "Shots", value: 0.3456549935149157 }
+			],
+			[
+				{ pais: "USA" },
+				{ axis: "Spikes", value: 0.487627365356623 },
+				{ axis: "Faults", value: 0.1445900048520136 },
+				{ axis: "Shots", value: 0.3677826297913634 }
+			]
+		];
+
+		var posPaises = {
+			ARG:{DIC: 0, POS: -1},
+			AUS: {DIC: 1, POS: -1},
+			BRA: {DIC: 2, POS: -1},
+			BUL: {DIC: 3, POS: -1},
+			CAN: {DIC: 4, POS: -1},
+			CHN: {DIC: 5, POS: -1},
+			FRA: {DIC: 6, POS: -1},
+			GER: {DIC: 7, POS: -1},
+			IRI: {DIC: 8, POS: -1},
+			ITA: {DIC: 9, POS: -1},
+			JPN: {DIC: 10, POS: -1},
+			POL: {DIC: 11, POS: -1},
+			POR: {DIC: 12, POS: -1},
+			RUS: {DIC: 13, POS: -1},
+			SRB: {DIC: 14, POS: -1},
+			USA: {DIC: 15, POS: -1}
+		}
+
+		var data = [
+			[
+				{ axis: "Spikes", value: 0 },
+				{ axis: "Faults", value: 0 },
+				{ axis: "Shots", value: 0 }
+			]
+		];
+
+		////////////////////////////////////////////////////////////// 
+		//////////////////// Draw the Chart ////////////////////////// 
+		////////////////////////////////////////////////////////////// 
+
+		var color = d3.scale.ordinal()
+			.range(["#EDC951", "#CC333F", "#00A0B0"]);
+
+		var radarChartOptions = {
+			w: width,
+			h: height,
+			margin: margin,
+			maxValue: 0.5,
+			levels: 5,
+			roundStrokes: true,
+			color: color
+		};
+		//Call function to draw the Radar chart
+		RadarChart(".radarChart", data, radarChartOptions);
+	</script>
+</body>
+
 </html>
