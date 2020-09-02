@@ -182,13 +182,13 @@
                 tooltip
                     .style("opacity", 1)
                     .html("Jogador: " + d.NAME)
-                    .style("left", (d3.mouse(this)[0] + 30) + "px")
-                    .style("top", (d3.mouse(this)[1] + 30) + "px")
+                    .style("left", (d3.mouse(this)[0]) + "px")
+                    .style("top", (d3.mouse(this)[1]) + "px")
             }
             var moveTooltip = function (d) {
                 tooltip
-                    .style("left", (d3.mouse(this)[0] + 30) + "px")
-                    .style("top", (d3.mouse(this)[1] + 30) + "px")
+                    .style("left", (d3.mouse(this)[0]) + "px")
+                    .style("top", (d3.mouse(this)[1]) + "px")
             }
             var hideTooltip = function (d) {
                 tooltip
@@ -206,7 +206,7 @@
                 .style("fill", "#FFFFFF")
                 .attr("cx", function (d) { return x(d.DIGS); })
                 .attr("cy", function (d) { return y(d.FAULTS); })
-                .attr("r", function (d) { return z(d.RECEPTIONS); })
+                .attr("r", function (d) { return z(d.TOTAL_ATTEMPTS); })
 
             await svg
                 .append('g')
@@ -219,7 +219,7 @@
                 .style("fill", function (d) { return myColor(d.TEAM) })
                 .attr("cx", function (d) { return x(d.DIGS); })
                 .attr("cy", function (d) { return y(d.FAULTS); })
-                .attr("r", function (d) { return z(d.RECEPTIONS); })
+                .attr("r", function (d) { return z(d.TOTAL_ATTEMPTS); })
                 .on("mouseover", showTooltip)
                 .on("mousemove", moveTooltip)
                 .on("mouseleave", hideTooltip)
